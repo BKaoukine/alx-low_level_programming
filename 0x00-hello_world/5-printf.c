@@ -11,7 +11,7 @@ int main(void)
 		/*
 		   * printf outputs the given string
 		*/
-		printf("with proper grammar, but the outcome is a piece of art,");
+		printf("with proper grammar, but the outcome is a piece of art,\n");
 		/*
 		   * the return value for success
 		*/
