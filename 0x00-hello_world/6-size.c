@@ -19,6 +19,7 @@ int main(void)
 		fprintf(stdout, "Size of a long int: %i byte(s)\n", sizeOfLongInt);
 		fprintf(stdout, "Size of a long long int: %i byte(s)\n", sizeOfLongLongInt);
 		fprintf(stdout, "Size of a float: %i byte(s)\n", sizeOfFloat);
+		fprintf(stderr, "%s", "[Anything]\n");
 
 		return (0);
 	}
