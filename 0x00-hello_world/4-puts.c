@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-	/*
-	   *This main function to print the string to STO
-	*/
+/**
+ * main - Entry point
+ *
+ * Description: 'This function outputs the string to STO'
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 	{
 		/*
