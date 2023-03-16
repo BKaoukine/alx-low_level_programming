@@ -1,10 +1,10 @@
 #include<stdio.h>
 /**
-  *main - starting point
+  * main - starting point
   *
-  *Discription : this fucntion outputs the size of various types to STO
+  * Discription : this fucntion outputs the size of various types to STO
   *
-  *Return : 0 for Success
+  * Return : 0 for Success
   */
 int main(void)
 	{
@@ -20,5 +20,5 @@ int main(void)
 		printf("Size of a long long int: %i byte(s)", sizeOfLongLongInt);
 		printf("Size of a float: %i byte(s)", sizeOfFloat);
 
-		return 0;
+		return (0);
 	}
