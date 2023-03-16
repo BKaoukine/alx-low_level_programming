@@ -15,7 +15,7 @@ int main(void)
 		int sizeOfFloat = sizeof(float);
 
 		fprintf(stdout, "Size of a char: %i byte(s)\n", sizeOfChar);
-		fprintf(stdout, "Size of a int: %i byte(s)\n", sizeOfInt);
+		fprintf(stdout, "Size of an int: %i byte(s)\n", sizeOfInt);
 		fprintf(stdout, "Size of a long int: %i byte(s)\n", sizeOfLongInt);
 		fprintf(stdout, "Size of a long long int: %i byte(s)\n", sizeOfLongLongInt);
 		fprintf(stdout, "Size of a float: %i byte(s)\n", sizeOfFloat);
