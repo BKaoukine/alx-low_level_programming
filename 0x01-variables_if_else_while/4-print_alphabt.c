@@ -12,6 +12,7 @@
 int main(void)
 {
 	char alphabet;
+	char newLine = '\n';
 
 	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
@@ -27,5 +28,6 @@ int main(void)
 		 *putchar(alphabets);
 		 *}
 		 */
+	putchar(newLine);
 	return (0);
 }
