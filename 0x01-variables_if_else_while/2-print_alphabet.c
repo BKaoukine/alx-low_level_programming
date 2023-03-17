@@ -3,7 +3,7 @@
 /* Other headers goes here */
 
 /**
-  * main Starting - point
+  * main - Starting point
   *
   * Discription:  this programm prints the alphabets in lowercase
   *
@@ -11,9 +11,9 @@
   */
 int main(void)
 {	int i;
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz\n";
 
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= 26; i++)
 	{
 		putchar(alphabet[i]);
 	}
