@@ -16,7 +16,7 @@ int main(void)
 
 	while (numBase <= 9)
 	{
-		printf("%i");
+		printf("%i", numBase);
 		numBase++;
 	}
 		/**
