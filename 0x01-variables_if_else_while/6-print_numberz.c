@@ -16,7 +16,7 @@ int main(void)
 
 	while (i <= 9)
 	{
-		printf('0', i);
+		putchar('0', i);
 		i++;
 	}
 		/**
