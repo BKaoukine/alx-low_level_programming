@@ -6,7 +6,7 @@
 /**
   * main - Starting point
   *
-  * Discription: this program get last digit of a number and run if statment on it
+  * Discription: check last digit of a number and run if statment on it
   *
   * Return: 0 for Successe
   */
@@ -27,6 +27,5 @@ int main(void)
 		{
 			printf("Last digit of %i is %i and is less than 6 and not 0\n", n, lDigit);
 		}
-	
 	return (0);
 }
