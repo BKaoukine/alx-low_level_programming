@@ -12,7 +12,6 @@
 int main(void)
 {
 	int i = 0;
-	char newLine = '\n';
 
 	while (i <= 9)
 	{
@@ -26,6 +25,6 @@ int main(void)
 		 *putchar(alphabets);
 		 *}
 		 */
-	putchar(newLine);
+	putchar('\n');
 	return (0);
 }
