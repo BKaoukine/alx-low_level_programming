@@ -20,7 +20,7 @@ int main(void)
 		putchar('0' + n);
 		n++;
 	}
-	for (i = 0; i <= 7; i++)
+	for (i = 0; i <= 6; i++)
 	{
 		putchar(alphabet[i]);
 	}
