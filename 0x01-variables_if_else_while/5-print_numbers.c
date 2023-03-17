@@ -12,7 +12,7 @@
 int main(void)
 {
 	int numBase = 0;
-	char newLine = "\n";
+	char newLine = '\n';
 
 	while (numBase <= 9)
 	{
