@@ -18,6 +18,7 @@ int main(void)
 	for (b = 0; b <= 9; b++)
 	{
 		putchar('0' + n);
+		n++;
 	}
 	for (i = 0; i <= 7; i++)
 	{
