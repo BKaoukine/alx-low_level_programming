@@ -3,14 +3,20 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+  * main - Starting point
+  *
+  * Discription: this program get last digit of a number and run if statment on it
+  *
+  * Return: 0 for Successe
+  */
 int main(void)
 {
-	int n;
-
+	int n , lastDigit;
+    
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int lastDigit = n%10;
+	lastDigit = n%10;
 	if (lastDigit>5)
 	{
 	    printf("Last digit of %i is %i and is greater than 5",n,lastDigit);
