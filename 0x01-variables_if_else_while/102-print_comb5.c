@@ -17,6 +17,7 @@ int main(void)
                 for (e = c ; e <= 10; e++) {
                     if (i != 10 && b != 10 && c != 10 && e != 10) {
                         if ( e != b) {
+				putchar(' ');
                             putchar('0' + i);
                             putchar('0' + b);
                             putchar(' ');
