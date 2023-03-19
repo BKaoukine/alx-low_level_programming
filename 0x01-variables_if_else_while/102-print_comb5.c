@@ -7,6 +7,8 @@
   *
   *Return: 0 for Successe
   */
+#include <stdio.h>
+
 int main(void)
 {
     int i, j, k, l;
@@ -23,7 +25,7 @@ int main(void)
                 putchar(' ');
                 putchar('0' + j);
                 putchar('0' + l);
-                if (i != 9 || j != 9) {
+                if (k != 8 || l != 8) {
                     putchar(',');
                     putchar(' ');
                 }
@@ -36,4 +38,6 @@ int main(void)
     }
     putchar('\n');
     return 0;
+}
+
 }
