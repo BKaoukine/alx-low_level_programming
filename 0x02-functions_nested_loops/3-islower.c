@@ -15,6 +15,7 @@
         result = 0;
     }
     _putchar(result + '0');
+    return 0;
 }
 
 
