@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_sign - function checks for positive or negative numbers
+ * _abs - function outputs the absolute value of giving number
  * @n: n is provided as a number
- * Discription: print a sign +,- or 0 depanding on the number
+ * Discription: reproduces the absolut value of number
  *
  * Return: 0 if Succes
 */
