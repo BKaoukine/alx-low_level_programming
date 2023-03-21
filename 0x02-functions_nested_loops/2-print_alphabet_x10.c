@@ -7,8 +7,7 @@
  *
  * Return: 0 if Succes
 */
-/* Online C Compiler and Editor */
-
+void print_alphabet(void){
     char alpha[] = "abcdefghijklmnopqrstuvwxyz";
 	int i, a=0;
 		while(a < 10){
@@ -22,3 +21,4 @@
 	    }
 	a++;
 		}
+}
