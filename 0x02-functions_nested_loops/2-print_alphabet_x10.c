@@ -7,7 +7,7 @@
  *
  * Return: 0 if Succes
 */
-void print_alphabet(void){
+void print_alphabet_x10(void){
     char alpha[] = "abcdefghijklmnopqrstuvwxyz";
 	int i, a=0;
 		while(a < 10){
