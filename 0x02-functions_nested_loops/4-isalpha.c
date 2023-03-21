@@ -11,7 +11,7 @@ int _isalpha(int c)
 {
 	int result;
 
-if (c > 56 && c < 123)
+if (c > 64 && c < 123)
 {
 	result = 1;
 } else
