@@ -7,19 +7,16 @@
  *
  * Return: 0 if Succes
 */
-int _islower(int c){
-	int r;
-	if(_islower(c) > 0){
-		return(1);
-	}else{
-		return(0);
+
+	int _islower(int c) {
+    int r;
+    if (c >= 'a' && c <= 'z') {
+        r = 1;
+        _putchar(r + '0');
+    } else {
+        r = 0;
+        _putchar(r + '0');
+    }
+    return r;
 	}
-  	r = _islower('H');
-    putchar(r + '0');
-    r = _islower('o');
-    putchar(r + '0');
-    r = _islower(108);
-    putchar(r + '0');
-    putchar('\n');
-    return (0);
-}
+
