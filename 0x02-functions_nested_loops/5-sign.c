@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _isalpha - function checks for lowercase alphabets
- * @c: c provided as a single alphabet
- * Discription: print 1 if the alphab is lowercase to the STO
+ * print_sign - function checks for positive or negative numbers
+ * @n: n is provided as a number
+ * Discription: print a sign +,- or 0 depanding on the number
  *
  * Return: 0 if Succes
 */
@@ -14,15 +14,21 @@ int print_sign(int n)
 if (n > 0)
 {
 	int positive = '+';
+
 	_putchar(positive);
 	result = 1;
-} else if( n < 0)
+} else if (n < 0)
 	{
 	int negative = '-';
+
 	_putchar(negative);
 	result = -1;
-	}else
+	}
+	else
 	{
+	int eqzero = '0';
+
+	_putchar(eqzero);
 		result = 0;
 	}
 	return (result);
