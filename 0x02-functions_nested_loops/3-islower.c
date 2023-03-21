@@ -13,4 +13,7 @@ _islower(int c){
 	}else{
 		return(0);
 	}
+
+	r = _islower('l');
+    printf("%d",r);
 }
