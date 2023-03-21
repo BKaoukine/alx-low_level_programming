@@ -8,7 +8,7 @@
  * Return: 0 if Succes
 */
 _islower(int c){
-	if(islower(c) > 0){
+	if(_islower(c) > 0){
 		return(1);
 	}else{
 		return(0);
