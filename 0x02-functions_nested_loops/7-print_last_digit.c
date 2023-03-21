@@ -7,9 +7,9 @@
  *
  * Return: 0 if Succes
 */
-int print_last_digit(int n)
+int print_last_digit(long int n)
 {
-	long int result;
+	int result;
 
 	if (n < 0)
 	{
