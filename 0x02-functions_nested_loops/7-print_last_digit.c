@@ -7,15 +7,16 @@
  *
  * Return: 0 if Succes
 */
-int print_last_digit(long int n)
+int print_last_digit(int n)
 {
 	int result;
+	result = n % 10;
 
 	if (n < 0)
 	{
 		n *= -1;
 	}
-	result = n % 10;
+	
 	_putchar(result + '0');
 	return (result);
 }
