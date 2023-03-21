@@ -7,9 +7,9 @@
  *
  * Return: 0 if Succes
 */
-int _islower(int c){
+_islower(int c){
 	if(islower(c) > 0){
-		retrurn(1);
+		return(1);
 	}else{
 		return(0);
 	}
