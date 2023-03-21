@@ -6,9 +6,9 @@
 void print_alphabet(void)
 {
 
-	char alpha[]="abcdefghijklmnopqrstuvwxyz";
+	char alpha[]="abcdefghijklmnopqrstuvwxyz\n";
 	int i;
-	for(i = 0; i < 25;i++)
+	for(i = 0; i < 26;i++)
 	{
 		_putchar(alpha[i]);
 	}
