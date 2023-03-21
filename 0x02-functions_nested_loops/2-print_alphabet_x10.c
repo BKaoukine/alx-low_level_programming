@@ -15,7 +15,7 @@ void print_alphabet_x10(void){
 	{
 		_putchar(alpha[i]);
 	}
-	    if(a < 9)
+	    if(a < 10)
 	    {
 	_putchar('\n');
 	    }
