@@ -4,7 +4,7 @@
 
 int _putchar(char c);
 
-#endif //_putchar_H_
+#endif
 
 
 
