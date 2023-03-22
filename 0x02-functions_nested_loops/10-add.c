@@ -12,8 +12,7 @@ int add(int i, int j)
 
 	sum = i +j;
 
-	_putchar('0'+sum);
-	return(0);
+	return(sum);
 
 }
 
