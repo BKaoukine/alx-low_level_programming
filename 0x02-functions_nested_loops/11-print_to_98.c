@@ -9,16 +9,16 @@
 */
 void print_to_98(int n)
 {
-	while (n != 99)
+	while (n != 98)
 {
 		printf("%i", n);
 	if (n != 98)
 		printf(", ");
 	if (n < 0)
 		n++;
-	else if (n > 0 && n < 99)
+	else if (n >= 0 && n <= 98)
 		n++;
-else
+else if(n > 98)
 {
 		n--;
 }
