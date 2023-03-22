@@ -28,7 +28,7 @@ int i;
                 }
             }
             putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i;
                 putchar('0' + multip);
@@ -39,7 +39,7 @@ int i;
                 }
             }
             putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*2;
                 
@@ -57,7 +57,7 @@ int i;
                 }
             }
              putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*3;
                 
@@ -75,7 +75,7 @@ int i;
                 }
             }
              putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*4;
                 
@@ -93,7 +93,7 @@ int i;
                 }
             }
              putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*5;
                 
@@ -111,7 +111,7 @@ int i;
                 }
             }
              putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*6;
                 
@@ -129,7 +129,7 @@ int i;
                 }
             }
              putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*7;
                 
@@ -147,7 +147,7 @@ int i;
                 }
             }
              putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*8;
                 
@@ -165,7 +165,7 @@ int i;
                 }
             }
              putchar('\n');
-            for (int i = 0; i <= 9; i++)
+            for (i = 0; i <= 9; i++)
             {
                 int multip = i*9;
                 
