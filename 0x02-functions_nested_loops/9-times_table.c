@@ -16,7 +16,8 @@ The first printed number should be the number passed to your function
 The last printed number should be 98
 You are allowed to use the standard library
 */
-		        for (int i = 0; i <= 9; i++)
+int i;
+		        for (i = 0; i <= 9; i++)
             {
                 int multip = 0;
                 putchar('0' + multip);
