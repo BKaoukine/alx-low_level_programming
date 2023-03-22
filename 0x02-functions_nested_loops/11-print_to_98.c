@@ -20,8 +20,12 @@ void print_to_98(int n) {
             while (n != 99) {
                 printf("%i",n);
                 if (n < 98){
-                     printf(", \n");
-                }
+                     printf(", ");
+                }else if (n == 98)
+				{
+					printf("\n");
+				}
+				
                 n++;
             }
 
@@ -29,16 +33,22 @@ void print_to_98(int n) {
             while(n>97) {
                 printf("%i",n);
                 if (n > 98){
-                     printf(", \n");
-                }
+                     printf(", ");
+                }else if (n == 98)
+				{
+					printf("\n");
+				}
                 n--;
             }
         } else {
             while (n != 99) {
                 printf("%i",n);
                 if (n < 98){
-                     printf(", \n");
-                }
+                     printf(", ");
+                }else if (n == 98)
+				{
+					printf("\n");
+				}
                 n++;
             }
 
