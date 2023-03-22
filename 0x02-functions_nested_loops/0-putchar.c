@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet - function prints alphabets to STO
+ * main - function prints alphabets to STO
  *
  * Discription: print lowercase alphabets to the STO
  *
  * Return: 0 if Succes
 */
 
-int main(void){
+int main(void)
+{
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');
