@@ -25,6 +25,7 @@ int i;
                 {
                 putchar(',');
                 putchar(' ');
+				putchar(' ');
                 }
             }
             putchar('\n');
@@ -36,6 +37,7 @@ int i;
                 {
                 putchar(',');
                 putchar(' ');
+				putchar(' ');
                 }
             }
             putchar('\n');
