@@ -1,190 +1,44 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
- * times_table - function outputs the absolute value of giving number
- * 
- * Discription: reproduces the absolut value of number
- *
- * Return: 0 if Succes
-*/
-void times_table(void)
+ * print_times_table - Prints the times table of the input,
+ *                     starting with 0.
+ * @n: The value of the times table to be printed.
+ */
+void print_times_table(int n)
 {
-/*
-Numbers must be separated by a comma, followed by a space
-Numbers should be printed in order
-The first printed number should be the number passed to your function
-The last printed number should be 98
-You are allowed to use the standard library
-*/
-int i;
-		        for (i = 0; i <= 9; i++)
-            {
-                int multip = 0;
-                putchar('0' + multip);
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-				putchar(' ');
-                }
-            }
-            putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i;
-                putchar('0' + multip);
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-				putchar(' ');
-                }
-            }
-            putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*2;
-                
-                if (multip < 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
-             putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*3;
-                
-                if (multip <= 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
-             putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*4;
-                
-                if (multip <= 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
-             putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*5;
-                
-                if (multip <= 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
-             putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*6;
-                
-                if (multip <= 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
-             putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*7;
-                
-                if (multip <= 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
-             putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*8;
-                
-                if (multip <= 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
-             putchar('\n');
-            for (i = 0; i <= 9; i++)
-            {
-                int multip = i*9;
-                
-                if (multip <= 9){
-                    putchar('0' + (multip));
-                }
-                else{
-                putchar('0' + (multip/10));
-                putchar('0' + (multip%10));
-                }
-                if(i != 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-            }
+	int num, mult, prod;
 
+	if (n >= 0 && n <= 15)
+	{
+		for (num = 0; num <= n; num++)
+		{
+			_putchar('0');
+
+			for (mult = 1; mult <= n; mult++)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * mult;
+
+				if (prod <= 99)
+					_putchar(' ');
+				if (prod <= 9)
+					_putchar(' ');
+
+				if (prod >= 100)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
+				}
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
+			}
+			_putchar('\n');
+		}
+	}
 }
-
-
