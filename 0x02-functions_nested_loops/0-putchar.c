@@ -9,8 +9,7 @@
 */
 
 int main(void){
-void print_alphabet(void)
-{
+
 	char alpha[] = "_putchar";
 	int i;
 
@@ -19,5 +18,5 @@ void print_alphabet(void)
 		_putchar(alpha[i]);
 	}
 	_putchar('\n');
-}
+	return(O);
 }
