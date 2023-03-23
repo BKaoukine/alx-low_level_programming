@@ -7,7 +7,7 @@
  *
  * Return: 0 if Succes
 */
-void void more_numbers(void)
+void more_numbers(void)
 {
 	int i, j;
 
