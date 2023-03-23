@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _isdigit - function checks for digits 
+ * _isdigit - function checks for digits
  * @c: c provided as a  numbers
  * Discription: print 1 if the alphab is uppercase to the STO
  *
