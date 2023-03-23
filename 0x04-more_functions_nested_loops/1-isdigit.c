@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _isupper - function checks for uppercase alphabets
- * @c: c provided as a single alphabet
+ * _isdigit - function checks for digits 
+ * @c: c provided as a  numbers
  * Discription: print 1 if the alphab is uppercase to the STO
  *
  * Return: 0 if Succes
 */
-int _isupper(int c)
+int _isdigit(int c)
 {
 	int result;
 
