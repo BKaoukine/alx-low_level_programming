@@ -28,4 +28,5 @@ printf("Buzz ");
 else
 printf("%i", i);
 }
+return (0);
 }
