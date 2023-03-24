@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_square - function print lines using dash
- *@n: number of dashes to use to print line
- * Discription: print line
+ * print_square - function print square to STO
+ * @size: number of # to use to print the square
+ * Discription: print square
  *
  * Return: 0 if Succes
 */
