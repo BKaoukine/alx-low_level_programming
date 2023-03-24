@@ -26,7 +26,7 @@ else if (isMulti5 == 0)
 printf("Buzz ");
 }
 else
-printf("%i", i);
+printf("%i ", i);
 }
 putchar('\n');
 return (0);
