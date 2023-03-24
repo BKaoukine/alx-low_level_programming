@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * print_square - function print square to STO
@@ -9,14 +8,13 @@
 */
 void print_square(int size)
 {
-	int size;
-
 if (size > 0)
 {
+int i;
 for (i = 0; i < size; i++)
 {
-	_putchar(35);
+	putchar(35);
 }
 }
-_putchar('\n');
+putchar('\n');
 }
