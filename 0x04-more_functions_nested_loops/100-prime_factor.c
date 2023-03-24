@@ -9,10 +9,11 @@
 
 int main(void)
 {
-long long numbertested = 612852475143LL;
-long long largestfactor = 1LL;
+long numbertested = 612852475143L;
+long largestfactor = 1L;
+long i;
 
-for (long long i = 3LL; i * i <= numbertested; i += 2LL)
+for (i = 3L; i * i <= numbertested; i += 2L)
 {
 if (numbertested % i == 0)
 {
@@ -25,6 +26,6 @@ if (numbertested > largestfactor)
 {
 largestfactor = numbertested;
 }
-printf("%lld\n", largestfactor);
+printf("%ld\n", largestfactor);
 return (0);
 }
