@@ -20,4 +20,9 @@ for (i = 0; i < size; i++)
 putchar('\n');
 }
 }
+else
+{
+putchar('\n');
+
+}
 }
