@@ -27,10 +27,10 @@ void print_rev(char *s)
 {
 int i = _strlen(s) - 1;
 
+_putchar('\n');
 while (i > 0)
 {
 putchar(*(s + i));
 i--;
 }
-_putchar('\n');
 }
