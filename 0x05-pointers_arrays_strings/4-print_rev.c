@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_rev - function prints string to STO
+ * _strlen - function returns the lenght of a string
  *@s: a pointer to a string array is given to the function
- * Discription: prints a string in to the STO in reverse
+ * Discription: prints the lenght of a string
  *
  * Return: 0 if Succes
 */
@@ -16,6 +16,13 @@ i++;
 }
 return (i);
 }
+/**
+ * print_rev - function prints string to STO
+ *@s: a pointer to a string array is given to the function
+ * Discription: prints a string in to the STO in reverse
+ *
+ * Return: 0 if Succes
+*/
 void print_rev(char *s)
 {
 int i = _strlen(s) - 1;
