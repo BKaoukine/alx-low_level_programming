@@ -1,0 +1,1 @@
+Directory for Pointer, Arrays and strings Projects
