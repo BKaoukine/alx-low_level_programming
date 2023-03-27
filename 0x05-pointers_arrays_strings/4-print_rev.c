@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * print_rev - function prints string to STO
- *@str: a pointer to a string array is given to the function
+ *@s: a pointer to a string array is given to the function
  * Discription: prints a string in to the STO in reverse
  *
  * Return: 0 if Succes
