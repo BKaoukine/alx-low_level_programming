@@ -25,7 +25,7 @@ return (i);
 */
 void print_rev(char *s)
 {
-int i = _strlen(s) - 1;
+int i = _strlen(s);
 
 while (i > 0)
 {
