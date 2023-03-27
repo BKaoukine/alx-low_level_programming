@@ -6,6 +6,16 @@
  *
  * Return: 0 if Succes
 */
+int _strlen(char *s)
+{
+int i = 0;
+
+while (*(s + i) != 0)
+{
+i++;
+}
+return (i);
+}
 void print_rev(char *s)
 {
 int i = _strlen(s) - 1;
