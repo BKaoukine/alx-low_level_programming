@@ -16,5 +16,6 @@ while (*src)
 src++;
 dest++;
 }
-	return(original_dest);
+*dest = '\0';
+return (original_dest);
 }
