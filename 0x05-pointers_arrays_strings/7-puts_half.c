@@ -40,7 +40,7 @@ j++;
 }
 else
 {
-j = (i + 1) / 2;
+j = i / 2 + 1;
 while (j <= i)
 {
 putchar(*(s + j));
