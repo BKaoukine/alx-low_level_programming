@@ -26,16 +26,27 @@ return (i);
 */
 void puts_half(char *s)
 {
-int i = _strlen(s);
+int i = _strlen(s) - 1;
 int j;
+
 if (i % 2 == 0)
 {
 j = i / 2;
 while (j <= i)
 {
-_putchar(*(s + j));
+putchar(*(s + j));
 j++;
 }
 }
-_putchar('\n');
+else
+{
+j = (i + 1) / 2;
+while (j <= i)
+{
+putchar(*(s + j));
+j++;
+}
+}
+
+putchar('\n');
 }
