@@ -9,12 +9,17 @@
 */
 char *_strcpy(char *dest, char *src)
 {
+	char *original_dest = dest;
 while (*src)
 {
 *dest = *src;
 src++;
 dest++;
 }
-//*dest = '\0';
-	return (0);
+*dest = '\0';
+<<<<<<< HEAD
+	return (original_dest);
+=======
+  return (0);
+>>>>>>> e5af9a08cf9713313d3ce8ec27bba94b98e546aa
 }
