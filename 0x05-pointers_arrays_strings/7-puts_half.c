@@ -32,7 +32,7 @@ int j;
 if (i % 2 == 0)
 {
 j = i / 2;
-while (j < i)
+while (j <= i)
 {
 putchar(*(s + j));
 j++;
