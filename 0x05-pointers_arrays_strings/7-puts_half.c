@@ -28,18 +28,18 @@ void puts_half(char *s)
 {
 int cnt = 0, lengh = 0, n;
 
-	while (str[cnt++])
+	while (s[cnt++])
 		lengh++;
 
-	if ((len % 2) == 0)
+	if ((lengh % 2) == 0)
 		n = lengh / 2;
 
 	else
 		n = (lengh + 1) / 2;
 
-	for (cnt = n; cnt < len; cnt++)
+	for (cnt = n; cnt < lengh; cnt++)
 	{
-		_putchar(str[cnt]);
+		_putchar(s[cnt]);
 	}
 	_putchar('\n');
 }
