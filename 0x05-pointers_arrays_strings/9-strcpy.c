@@ -17,5 +17,9 @@ src++;
 dest++;
 }
 *dest = '\0';
+<<<<<<< HEAD
 	return (original_dest);
+=======
+  return (0);
+>>>>>>> e5af9a08cf9713313d3ce8ec27bba94b98e546aa
 }
