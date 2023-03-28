@@ -37,4 +37,5 @@ _putchar(*(s + j));
 j++;
 }
 }
+_putchar('\n');
 }
