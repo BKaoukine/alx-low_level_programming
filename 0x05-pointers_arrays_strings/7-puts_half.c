@@ -34,7 +34,7 @@ if (i % 2 == 0)
 j = i / 2;
 while (j < i)
 {
-putchar(*(s + j));
+_putchar(*(s + j));
 j++;
 }
 }
@@ -43,10 +43,16 @@ else
 j = i / 2 + 1;
 while (j <= i)
 {
-putchar(*(s + j));
+_putchar(*(s + j));
 j++;
 }
 }
+
+
+
+
+
+
 
 putchar('\n');
 }
