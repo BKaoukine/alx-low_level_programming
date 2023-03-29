@@ -9,15 +9,21 @@
 */
 char *_strcat(char *dest, char *src)
 {
-    int dest_len = _strlen(dest)-1;
-    int i;
+    /* use a working pointer to preserve dest for the return value */
+char *d = dest;
 
-    for (i = 0; src[i] != '\0'; i++)
-    {
-        dest[dest_len + i] = src[i];
-    }
-
-    dest[dest_len + i] = '\0';
-
-    return dest;
+    /* find the offset of the null terminator in dest */
+	while (*d != '\0')
+	{
+		d++;
+	}
+    /* copy the bytes from the src string there */
+	while (*src != '\0')
+	{
+		*d++ = *src++;
+	}
+    /* set the null terminator */
+		*d = '\0';
+    /* return the pointer to the destination array */
+return (dest);
 }
