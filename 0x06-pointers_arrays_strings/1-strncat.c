@@ -36,7 +36,10 @@ for (i = 0; i < lenofsrc; i++)
 }
 }
 /* set the null terminator */
-*d = '\0';
+if (n > lenofsrc)
+{
+*d++ = '\0';
+}
 /* return the pointer to the destination array */
 return (dest);
 }
