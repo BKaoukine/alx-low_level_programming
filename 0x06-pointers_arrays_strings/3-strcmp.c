@@ -9,16 +9,14 @@
  * Return: 0 if Succes
 */
 int _strcmp(char *s1, char *s2)
-{	/*Initialize the comparison varibale*/
-int compar;
-/*Compar both strings and return values based on the result*/
-while(*s1 != '\0' && *s2 != '\0')
 {
-if (*s1 < *s2 || *s1 > *s2)
-compar = *s1 - *s2;
-else
-compar = *s1 - *s2;
-}
+	int i;
 
-return (compar);
-}
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
+	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+	}
+	return (0);
