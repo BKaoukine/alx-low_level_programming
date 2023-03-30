@@ -2,21 +2,34 @@
 #include "main.h"
 /**
  * cap_string - changes all uppercase letters of a string to lowercase
- * @st: the string to modify
+ * @n: the string to modify
  *
  * Return: the modified string
  */
-char *cap_string(char *st)
+char *cap_string(char *n)
 {
-int i;
+	int i, j;
+	int cap = 32;
+	int separat[] = {',', ';', '.', '?', '"',
+			    '(', ')', '{', '}', ' ', '\n', '\t'};
 
-for (i = 0; str[i] != '\0'; i++)
-{
-if (str[i] >= 'A' && str[i] <= 'Z')
-{
-str[i] = str[i] + 32;
-}
-}
+	for (i = 0; n[i] != '\0'; i++)
+	{
+		if (n[i] >= 'a' && n[i] <= 'z')
+		{
+			n[i] = n[i] - cap;
+		}
 
-return (str);
+		cap = 0;
+
+		for (j = 0; j <= 12; j++)
+		{
+			if (n[i] == separat[j])
+			{
+				j = 12;
+				cap = 32;
+			}
+		}
+	}
+	return (n);
 }
