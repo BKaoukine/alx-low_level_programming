@@ -12,9 +12,7 @@ int _strcmp(char *s1, char *s2)
 {	/*Initialize the comparison varibale*/
 int compar;
 /*Compar both strings and return values based on the result*/
-if (*s1 < *s2)
-compar = *s1 - *s2;
-else if (*s1 > *s2)
+if (*s1 < *s2 || *s1 > *s2)
 compar = *s1 - *s2;
 else
 compar = 0;
