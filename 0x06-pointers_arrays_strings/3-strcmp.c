@@ -15,7 +15,7 @@ int compar;
 if (*s1 < *s2 || *s1 > *s2)
 compar = *s1 - *s2;
 else
-compar = 0;
+compar = *s1 - *s2;
 
 return (compar);
 }
