@@ -12,7 +12,7 @@ char *rot13(char *s)
 /*intialize the integers needed and the rot13 alphabets*/
 	int r1 = 0, r2 = 0;
 	char rot1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char ror2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char rot2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	while (*(s + r1) != 0)/*check the string for NULL*/
 	{
