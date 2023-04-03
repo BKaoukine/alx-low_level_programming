@@ -11,7 +11,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 /*Initialise a variable to hold the length*/
-unsigned int colength_holderunt = 0;
+unsigned int length_holder = 0;
 /*Initialise a variable for eteration*/
 int i, j;
 
