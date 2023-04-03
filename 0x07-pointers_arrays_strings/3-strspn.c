@@ -11,19 +11,26 @@
 unsigned int _strspn(char *s, char *accept)
 {
 /*Initialise a variable to hold the length*/
-	unsigned int length_holder = 0;
-/*Check for the end of the string using NULL*/
-	while (*s != '\0' && *accept != '\0')
+unsigned int colength_holderunt = 0;
+/*Initialise a variable for eteration*/
+int i, j;
+
+	for (i = 0; s[i]; i++)
 	{
 /*Check for Characters match*/
-		if (*s == *accept)
+		for (j = 0; accept[j]; j++)
 		{
 /*Increment length when we got a match and also accept to check for next Char*/
-			length_holder++;
-			accept++;
+			if (s[i] == accept[j])
+			{
+				length_holder++;
+				break;
+			}
 		}
-		s++;
+/*Check for the end of the string -> NULL*/
+		if (!accept[j])
+		break;
 	}
 /*Return the length of the initial segment*/
-	return (length_holder);
+		return (length_holder);
 }
