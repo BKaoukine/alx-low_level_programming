@@ -10,23 +10,23 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-/*Check for the End of haystack*/
-	while (*haystack != '\0')
+/*Eterat throught the haystack*/
+	for (; *haystack != '\0'; haystack++)
 	{
-/*Check for the End of needle*/
-		char *a = needle;
-
-		while (*a != '\0')
+/*Initialise two pointers to compare*/
+		char *a = haystack;
+		char *b = needle;
+/*Check if there's a match and move to next character*/
+		while (*a == *b && *b != '\0')
 		{
-/*Search for the 1st match and point to it*/
-			if (*haystack == *a)
-			{
-				return (haystack);
-			}
-			haystack++;/*if no match found increment to next char*/
+			a++;
+			b++;
 		}
-
+/*if b reaches it's end and all characters where found return the haystack*/
+		if (*b == '\0')
+			return (haystack);
 	}
-	return (NULL);
+/*if none was found return 0*/
+	return (0);
 }
 
