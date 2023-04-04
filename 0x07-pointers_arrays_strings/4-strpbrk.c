@@ -15,6 +15,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 /*Check for the End of accept*/
 		char *a = accept;
+
 		while (*a != '\0')
 		{
 /*Search for the 1st match and point to it*/
