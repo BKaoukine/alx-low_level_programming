@@ -14,12 +14,13 @@ char *_strpbrk(char *s, char *accept)
 	while (*s != '\0')
 	{
 /*Check for the End of accept*/
-		while (*accept != '\0')
+		char *a = accept;
+		while (*a != '\0')
 		{
 /*Search for the 1st match and point to it*/
-			if (*s == *accept)
+			if (*s == *a)
 				return (s);
-			accept++;
+			a++;
 		}
 		s++;
 	}
