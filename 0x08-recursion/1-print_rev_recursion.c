@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _puts_recursion - function Prints a string
+ * _print_rev_recursion - function Prints a string in reverse
  * @s: string to print
  *
- * Description: print the given string using recursive Call
+ * Description:Reverse print the given string using recursive Call
  *
  * Return: a string if succes
  */
