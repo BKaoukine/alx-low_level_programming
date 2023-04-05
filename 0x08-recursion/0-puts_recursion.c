@@ -18,5 +18,6 @@ void _puts_recursion(char *s)
 /*Call the function recursivly to move to the other Characaters*/
 			_puts_recursion(s + 1);
 		}
+		_putchar('\n');
 
 }
