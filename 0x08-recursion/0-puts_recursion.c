@@ -17,7 +17,7 @@ void _puts_recursion(char *s)
 			_putchar(*s);
 /*Call the function recursivly to move to the other Characaters*/
 			_puts_recursion(s + 1);
-		}else
-_putchar('\n');
+		} else
+		_putchar('\n');
 
 }
