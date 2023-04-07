@@ -9,9 +9,9 @@
 */
 int _atoi(char *s)
 {
-	while(s)
+	while (s)
 	{
-	
+
 	}
-	return(1);
+	return (1);
 }
