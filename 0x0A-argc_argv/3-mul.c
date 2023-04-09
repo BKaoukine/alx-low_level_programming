@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * main - Starting point
  * @argc: The lenght of the compiling parameters
@@ -21,11 +22,10 @@ int main(int argc, char *argv[])
 		printf("%d\n", sum);
 
 	}
-	else
+	else if (argc == 1 || argc == 2)
 	{
-	printf("error");
-	printf("\n");
-	return (1);
+		printf("Error\n");
+		return (1);
 	}
 	return (0);
 }
