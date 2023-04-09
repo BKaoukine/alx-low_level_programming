@@ -13,20 +13,21 @@ int main(int argc, char *argv[])
 {
 	int sum, i, j;
 
-	if (argc <= 1 || argc < 2)
-	{
-	printf("error");
-	printf("\n");
-	}
-	else
+	if (argc == 3)
 	{
 		i = atoi(argv[1]);
 		j = atoi(argv[2]);
 		sum = i * j;
 		printf("%d\n", sum);
+
+	}
+	else
+	{
+	printf("error");
+	printf("\n");
 	}
 
 
 
-	return (0);
+	return (1);
 }
