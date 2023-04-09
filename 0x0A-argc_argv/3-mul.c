@@ -5,7 +5,7 @@
  * @argc: The lenght of the compiling parameters
  * @argv: The actual compiling parameters
  *
- *Description: function that prints all parameters used during compiling
+ *Description: function that prints multiplication of two numbers
  * Return: On success 1.
  */
 
@@ -25,9 +25,6 @@ int main(int argc, char *argv[])
 	{
 	printf("error");
 	printf("\n");
-	}
-
-
-
 	return (1);
+	}
 }
