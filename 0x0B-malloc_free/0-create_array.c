@@ -24,5 +24,5 @@ for (i = 0; i < size; i++)
 }
 
 }
-	return (*strarray);
+	return (strarray);
 }
