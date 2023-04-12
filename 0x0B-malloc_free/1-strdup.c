@@ -8,6 +8,7 @@
 char *_strdup(char *str)
 {
 char *strcopy;
+unsigned int i;
 if (sizeof(str) == 0)
 {
 return (NULL);
@@ -24,6 +25,6 @@ for (i = 0; i < sizeof(strcopy); i++)
 }
 
 }
-	return (strarray);
+	return (strcopy);
 }
 
