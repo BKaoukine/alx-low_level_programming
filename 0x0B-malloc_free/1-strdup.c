@@ -25,7 +25,6 @@ for (i = 0; i < sizeof(strcopy); i++)
 }
 
 }
-free(strcopy);
 	return (strcopy);
 }
 
