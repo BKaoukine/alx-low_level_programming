@@ -20,7 +20,7 @@ len1++;
 while (s2[len2] != '\0')
 len2++;
 
-new_str = malloc((len1 + len2 + 1) sizeof(char));
+new_str = malloc((len1 + len2 + 1) * sizeof(char));
 if (new_str == NULL)
 return (NULL);
 
