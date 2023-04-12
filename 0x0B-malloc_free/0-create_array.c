@@ -16,8 +16,8 @@ return (NULL);
 }
 else
 {
-strarray = (char *) malloc((size + 1) * sizeof(char));
-for (i = 0; i < size; i++)
+strarray = (char *) malloc(size * sizeof(char));
+for (i = 0; i < size - 1; i++)
 {
 	strarray[i] = c;
 }
