@@ -23,10 +23,9 @@ else
 {
 char *p;
 strcopy = (char *) malloc(i * sizeof(char));
+p = strcopy;
 if (strcopy == NULL)
 return (NULL);
-
-p = strcopy;
 while (*s1 != '\0')
 {
 *p = *s1;
