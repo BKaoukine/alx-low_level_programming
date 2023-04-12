@@ -9,7 +9,8 @@
 char *str_concat(char *s1, char *s2)
 {
 char *strcopy;
-unsigned int i = strlen(s1) + strlen(s2);
+unsigned int i = strlen(s1) + strlen(s2) + 1;
+
 if (s1 == NULL || s2 == NULL)
 {
 return (NULL);
@@ -20,20 +21,25 @@ strcopy = (char *) malloc(i * sizeof(char));
 if (strcopy == NULL)
 return (NULL);
 
-while (s1 != '\0')
+char *p = strcopy;
+while (*s1 != '\0')
 {
-	strcopy = s1;
-	strcopy++;
-}
-while (s2 != '\0')
-{
-	strcopy = s2;
-	strcopy++;
+*p = *s1;
+p++;
+s1++;
 }
 
-strcopy[i] = '\0';
+while (*s2 != '\0')
+{
+*p = *s2;
+p++;
+s2++;
+}
+
+*p = '\0';
 }
 return (strcopy);
 }
+
 
 
