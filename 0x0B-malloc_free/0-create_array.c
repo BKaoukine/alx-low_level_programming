@@ -10,13 +10,16 @@ char *create_array(unsigned int size, char c)
 {
 char *strarray;
 unsigned int i;
-if (size == 0 || strarray== NULL)
+if (size == 0)
 {
 return (NULL);
 }
 else
 {
 strarray = (char *) malloc(size * sizeof(char));
+if (strarray == NULL)
+return (NULL);
+
 for (i = 0; i < size; i++)
 {
 	strarray[i] = c;
@@ -25,3 +28,4 @@ for (i = 0; i < size; i++)
 }
 	return (strarray);
 }
+
