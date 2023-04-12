@@ -31,7 +31,6 @@ while (s2 != '\0')
 	strcopy++;
 }
 
-}
 strcopy[i] = '\0';
 }
 return (strcopy);
