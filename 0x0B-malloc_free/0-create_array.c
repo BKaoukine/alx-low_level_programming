@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * create_array - function copies string
@@ -17,7 +16,7 @@ return (NULL);
 }
 else
 {
-strarray = (char *) malloc(size * sizeof(char));
+strarray = (char *) malloc((size + 1) * sizeof(char));
 for (i = 0; i < size; i++)
 {
 	strarray[i] = c;
