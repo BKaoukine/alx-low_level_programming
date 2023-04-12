@@ -21,7 +21,7 @@ return (NULL);
 
 for (i = 0; i < sizeof(strcopy); i++)
 {
-	strarray[i] = str[i];
+	strcopy[i] = str[i];
 }
 
 }
