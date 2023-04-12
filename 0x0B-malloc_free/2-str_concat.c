@@ -17,11 +17,12 @@ return (NULL);
 }
 else
 {
+char *p;
 strcopy = (char *) malloc(i * sizeof(char));
 if (strcopy == NULL)
 return (NULL);
 
-char *p = strcopy;
+char p = strcopy;
 while (*s1 != '\0')
 {
 *p = *s1;
