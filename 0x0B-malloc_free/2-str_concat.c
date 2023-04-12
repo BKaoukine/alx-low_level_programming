@@ -12,10 +12,13 @@ char *strcopy;
 unsigned int i = strlen(s1) + strlen(s2) + 1;
 
 if (s1 == NULL)
+{
 s1 = "";
+}
 if (s2 == NULL)
-s2 = "";
-
+{
+	s2 = "";
+}
 else
 {
 char *p;
