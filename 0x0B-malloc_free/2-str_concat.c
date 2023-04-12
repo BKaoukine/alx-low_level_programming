@@ -22,7 +22,7 @@ strcopy = (char *) malloc(i * sizeof(char));
 if (strcopy == NULL)
 return (NULL);
 
-char p = strcopy;
+p = strcopy;
 while (*s1 != '\0')
 {
 *p = *s1;
