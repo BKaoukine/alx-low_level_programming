@@ -41,7 +41,6 @@ p++;
 s2++;
 }
 
-*p = '\0';
 }
 return (strcopy);
 }
