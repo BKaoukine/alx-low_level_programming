@@ -1,48 +1,36 @@
 #include "main.h"
 /**
- * str_concat - function copies string
- *@s1: char to copy
- *@s2: char to copy
- * Discription: create a char with specified size of memory
- * Return: 0 if Succes
-*/
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to concatenated string
+ */
 char *str_concat(char *s1, char *s2)
 {
-char *strcopy;
-unsigned int i = strlen(s1) + strlen(s2) + 1;
+char new_str;
+int i, j, len1 = 0, len2 = 0;
 
-if (*s1 == NULL)
-{
-*s1 = "";
-}
-if (*s2 == NULL)
-{
-	*s2 = "";
-}
-else
-{
-char *p;
-strcopy = (char *) malloc(i * sizeof(char));
-p = strcopy;
-if (strcopy == NULL)
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
+
+while (s1[len1] != '\0')
+len1++;
+while (s2[len2] != '\0')
+len2++;
+
+new_str = malloc((len1 + len2 + 1) sizeof(char));
+if (new_str == NULL)
 return (NULL);
-while (*s1 != '\0')
-{
-*p = *s1;
-p++;
-s1++;
+
+for (i = 0; s1[i] != '\0'; i++)
+new_str[i] = s1[i];
+
+for (j = 0; s2[j] != '\0'; j++)
+new_str[i + j] = s2[j];
+
+new_str[i + j] = '\0';
+
+return (new_str);
 }
-
-while (*s2 != '\0')
-{
-*p = *s2;
-p++;
-s2++;
-}
-
-}
-return (strcopy);
-}
-
-
-
