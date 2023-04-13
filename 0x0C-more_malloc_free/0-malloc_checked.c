@@ -12,4 +12,5 @@ void *malloc_checked(unsigned int b)
 	allocmem = malloc(b * sizeof(int));
 
 	return (allocmem);
+	exit(EXIT_FAILURE);
 }
