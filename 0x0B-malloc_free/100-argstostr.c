@@ -8,7 +8,7 @@
 char *argstostr(int ac, char **av)
 {
 /* Declare increment variable*/
-	int i, j;
+	int i;
 
 /* Check for invalid input */
 	if (ac == 0 || av  == NULL)
@@ -24,5 +24,5 @@ char *argstostr(int ac, char **av)
 		printf("%s\n", av[i]);
 	}
 /*Return a pointer to the 2D array*/
-	return (av);
+	return (*av);
 }
