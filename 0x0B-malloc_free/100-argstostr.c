@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 /* Allocate memory for the array of strings */
-	av = malloc(ac * sizeof(int *));
+	av = malloc((ac + 1) * sizeof(char *));
 	if (av == NULL)/* Check for allocation failure */
 		return (NULL);
 
