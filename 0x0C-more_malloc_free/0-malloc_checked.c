@@ -10,7 +10,8 @@ void *malloc_checked(unsigned int b)
 	int *allocmem;
 
 	allocmem = malloc(b * sizeof(int));
+	if(allocmem == NULL)
+		exit(98);
 
 	return (allocmem);
-	exit(EXIT_FAILURE);
 }
