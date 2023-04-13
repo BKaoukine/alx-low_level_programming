@@ -5,9 +5,11 @@
  * Discription: allocate memory for given size
  * Return: 0 if Succes
 */
-void *malloc_checked(unsigned int b);
+void *malloc_checked(unsigned int b)
 {
 	int *allocmem;
 
-	allocmem = malloc(b * sizeof(int);)
+	allocmem = malloc(b * sizeof(int));
+
+	return (allocmem);
 }
