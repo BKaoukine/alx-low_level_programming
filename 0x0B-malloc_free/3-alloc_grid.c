@@ -10,8 +10,8 @@ int **alloc_grid(int width, int height)
 /* Declare a pointer to a 2D array of integers and increment variables*/
 	int i, j;
 	int **grid;
-)/* Check for invalid input */
-	if (width <= 0 || height <= 0
+/* Check for invalid input */
+	if (width <= 0 || height <= 0)
 		return (NULL);
 
 /* Allocate memory for the 2D array of integers */
