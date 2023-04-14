@@ -40,4 +40,5 @@ new_str[i + j] = s2[j];
 new_str[i + j] = '\0';
 
 return (new_str);
+
 }
