@@ -11,7 +11,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 	int *memalloc;
 /* Check for invalid input */
-	if (nmemb = 0 || size = 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
 /* Allocate memory for the array */
