@@ -5,7 +5,7 @@
  * @max: maximum number to input
  * Return: pointer to array of int
  */
-int *array_range(int min, int max);
+int *array_range(int min, int max)
 {
 /* Declare a pointer to the memory of array and increment variables*/
 	unsigned int i, array_size = (max - min) + 1;
