@@ -9,7 +9,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 /* Declare a pointer to a 2D array of integers and increment variables*/
 	unsigned int i;
-	int *memalloc;
+	char *memalloc;
 /* Check for invalid input */
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -20,7 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 /* Initialize each element of the array to zero */
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < (nmemb * size); i++)
 	{
 		memalloc[i] = 0;
 	}
@@ -28,3 +28,4 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 /*Return a pointer to the allocated memory of the array*/
 return (memalloc);
 }
+
