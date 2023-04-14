@@ -24,8 +24,8 @@ lenght_s1++;
 while (s2[lenght_s2] != '\0')
 lenght_s2++;
 
-if (n >= length_s2)
-n = length_s2;
+if (n >= lenght_s2)
+n = lenght_s2;
 
 new_str = malloc((lenght_s1 + n + 1) * sizeof(char));
 if (new_str == NULL)
