@@ -24,7 +24,10 @@ lenght_s1++;
 while (s2[lenght_s2] != '\0')
 lenght_s2++;
 
-new_str = malloc((lenght_s1 + lenght_s2 + 1) * sizeof(char));
+if (n >= length_s2)
+n = length_s2;
+
+new_str = malloc((lenght_s1 + n + 1) * sizeof(char));
 if (new_str == NULL)
 return (NULL);
 
@@ -32,10 +35,7 @@ for (i = 0; s1[i] != '\0'; i++)
 new_str[i] = s1[i];
 
 for (j = 0; s2[j] != '\0'; j++)
-{
-	if (j <= n)
-	new_str[i + j] = s2[j];
-}
+new_str[i + j] = s2[j];
 
 new_str[i + j] = '\0';
 
