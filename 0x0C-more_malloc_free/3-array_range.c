@@ -8,7 +8,7 @@
 int *array_range(int min, int max)
 {
 /* Declare a pointer to the memory of array and increment variables*/
-	unsigned int i, array_size = (max - min) + 1;
+	int i,j, array_size = (max - min) + 1;
 	int *array_int;
 /* Check for invalid input */
 	if (min > max)
@@ -22,7 +22,11 @@ int *array_range(int min, int max)
 /* Initialize each element of the array to min to max value */
 	for (i = min; i <= max; i++)
 	{
-		memalloc[array_size] = i;
+		for ( j = 0; j <= array_size; j++)
+		{
+			array_int[j] = i;
+		}
+		
 	}
 
 /*Return a pointer to the array of int*/
