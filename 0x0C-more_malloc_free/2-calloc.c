@@ -11,7 +11,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 	int *memalloc;
 /* Check for invalid input */
-	if (nmemb <= 0 || size <= 0)
+	if (nmemb = 0 || size = 0)
 		return (NULL);
 
 /* Allocate memory for the array */
@@ -19,10 +19,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (memalloc == NULL)/* Check for allocation failure */
 		return (NULL);
 
-/* Initialize each element of the 2D array to zero */
+/* Initialize each element of the array to zero */
 	for (i = 0; i < nmemb; i++)
 	{
-			memalloc[i] = 0;
+		memalloc[i] = 0;
 	}
 
 /*Return a pointer to the allocated memory of the array*/
