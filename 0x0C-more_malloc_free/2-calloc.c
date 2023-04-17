@@ -7,7 +7,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-/* Declare a pointer to a 2D array of integers and increment variables*/
+/* Declare a pointer to the memory of array and increment variables*/
 	unsigned int i;
 	char *memalloc;
 /* Check for invalid input */
