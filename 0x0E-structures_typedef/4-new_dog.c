@@ -56,7 +56,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	owner = malloc(sizeof(_strlen(owner)) + 1);
 
 /*Check if the pointer variable is NULL*/
-	if (new_dog == NULL)
+	if (new_dog == NULL || name == NULL || owner == NULL)
 		return (NULL);
 
 /*Storing new values */
