@@ -50,19 +50,29 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 
-/*Allocate memory for the new struct*/
+/* Allocate memory for the new struct */
 	new_dog = malloc(sizeof(dog_t));
-	name = malloc(sizeof(_strlen(name)) + 1);
-	owner = malloc(sizeof(_strlen(owner)) + 1);
+	if (new_dog == NULL)
+	{
+	return (NULL);
+	}
 
-/*Check if the pointer variable is NULL*/
-	if (new_dog == NULL || name == NULL || owner == NULL)
+/* Allocate memory for the name and owner strings */
+	new_dog->name = malloc(_strlen(name) + 1);
+	new_dog->owner = malloc(_strlen(owner) + 1);
+		if (new_dog->name == NULL || new_dog->owner == NULL)
+		{
+		free(new_dog);
 		return (NULL);
+		}
 
-/*Storing new values */
+/* Copy the name and owner strings */
 	_strcpy(new_dog->name, name);
 	_strcpy(new_dog->owner, owner);
+
+/* Set the age */
 	new_dog->age = age;
 
-return (new_dog);
+	return (new_dog);
 }
+
