@@ -26,7 +26,7 @@ va_list stringArgs;
 			printf("nil");
 			}
 
-			if (separator != NULL && i != n - 1)
+			if (separator != NULL && i < n - 1)
 			{
 			printf("%s", separator);
 			}
