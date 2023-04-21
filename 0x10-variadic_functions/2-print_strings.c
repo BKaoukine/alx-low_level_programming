@@ -18,13 +18,13 @@ char *stringToPrint;
 			{
 
 				stringToPrint = va_arg(stringArgs, char *);
-					if (i != 0 && stringToPrint != NULL && separator != NULL)
+					if (i != 0 && *stringToPrint != '\0' && separator != NULL)
 					{
 						printf("%s%s", separator, stringToPrint);
 					}
-					else if (i != 0 && stringToPrint == NULL && separator != NULL)
+					else if (i != 0 && *stringToPrint == '\0' && separator != NULL)
 						printf("%s%s", separator, "nil");
-					else if (separator == NULL && stringToPrint == NULL )
+					else if (separator == NULL && *stringToPrint == '\0' )
 						printf("%s", "nill");
 					else 
 						printf("%s", stringToPrint);
