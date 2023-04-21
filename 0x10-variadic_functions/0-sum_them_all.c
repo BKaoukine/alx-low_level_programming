@@ -7,16 +7,15 @@
 */
 int sum_them_all(const unsigned int n, ...)
 {
-	if (n == 0)
-	return (0);
-
 	va_list args;	/* Declaring an args variables
 					*that holds the function's arguments
 					*/
+	unsigned int i;
+	int sumOfArgs = 0;
 
-	int i, sumOfArgs = 0;
-
-	va_start(args, n) /*Save the args in a list of n number of arguments*/
+	if (n == 0)
+	return (0);
+	va_start(args, n); /*Save the args in a list of n number of arguments*/
 
 	for (i = 0; i < n; i++)
 	{
