@@ -10,27 +10,25 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 
 unsigned int i;
-char *stringToPrint, *sep;
+char *stringToPrint;
 	va_list stringArgs;
 
 	va_start(stringArgs, n);
-	sep = (char *) separator;
-
 			for (i = 0; i < n; i++)
 			{
 
 				stringToPrint = va_arg(stringArgs, char *);
-					if (i != 0 && *stringToPrint != '\0' && *sep != '\0')
+					if (i != 0 && *stringToPrint != '\0' && separator != NULL)
 					{
-						printf("%s%s", sep, stringToPrint);
+						printf("%s%s", separator, stringToPrint);
 					}
-					else if (i != 0 && *stringToPrint == '\0' && *sep != '\0')
-						printf("%s%s", sep, "nil");
-					else if (*sep == '\0' && *stringToPrint == '\0' )
-						printf("%s", "nill");
+					else if (i != 0 && *stringToPrint == '\0' && separator != NULL)
+						printf("%s%s", separator, "nil");
+					else if (separator == NULL && *stringToPrint == '\0' )
+						printf("%s", "nil");
 					else 
 						printf("%s", stringToPrint);
 			}
 printf("\n");
-
+va_end(stringArgs);
 }
