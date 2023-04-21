@@ -16,21 +16,18 @@ char *stringToPrint;
 	va_start(stringArgs, n);
 			for (i = 0; i < n; i++)
 			{
-				if (separator != NULL && stringArgs != NULL)
-				{
+
 				stringToPrint = va_arg(stringArgs, char *);
-					if (i != 0)
+					if (i != 0 && stringToPrint != NULL && separator != NULL)
 					{
 						printf("%s%s", separator, stringToPrint);
 					}
-					else
+					else if (i != 0 && stringToPrint == NULL && separator != NULL)
+						printf("%s%s", separator, "nil");
+					else if (separator == NULL && stringToPrint == NULL )
+						printf("%s", "nill");
+					else 
 						printf("%s", stringToPrint);
-				}
-				else if (separator != NULL && stringArgs == NULL && i != 0)
-				printf("%s%s", separator, "Nil");
-				else
-				printf("%s", "nil");
-
 			}
 printf("\n");
 
