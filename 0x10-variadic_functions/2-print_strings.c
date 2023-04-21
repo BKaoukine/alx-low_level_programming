@@ -3,32 +3,37 @@
  * print_strings - prints given arguments
  * @separator: the string to be printed between strings
  * @n: the number of elements of the arguments
- * Return: 0 if Succes
- *
-*/
+ * Return: void
+ */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-
 unsigned int i;
 char *stringToPrint;
-	va_list stringArgs;
+va_list stringArgs;
 
 	va_start(stringArgs, n);
-			for (i = 0; i < n; i++)
-			{
 
-				stringToPrint = va_arg(stringArgs, char *);
-					if (i != 0 && *stringToPrint != '\0' && separator != NULL)
-					{
-						printf("%s%s", separator, stringToPrint);
-					}
-					else if (i != 0 && *stringToPrint == '\0' && separator != NULL)
-						printf("%s%s", separator, "nil");
-					else if (separator == NULL && *stringToPrint == '\0' )
-						printf("%s", "nil");
-					else 
-						printf("%s", stringToPrint);
+	for (i = 0; i < n; i++)
+	{
+		stringToPrint = va_arg(stringArgs, char *);
+
+			if (stringToPrint != NULL && stringToPrint[0] != '\0')
+			{
+			printf("%s", stringToPrint);
 			}
-printf("\n");
-va_end(stringArgs);
+			else
+			{
+			printf("nil");
+			}
+
+			if (separator != NULL && i != n - 1)
+			{
+			printf("%s", separator);
+			}
+	}
+
+	printf("\n");
+	va_end(stringArgs);
 }
+
+
