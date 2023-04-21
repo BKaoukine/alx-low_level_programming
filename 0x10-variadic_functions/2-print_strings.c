@@ -17,7 +17,7 @@ va_list stringArgs;
 	{
 		stringToPrint = va_arg(stringArgs, char *);
 
-			if (stringToPrint != NULL && stringToPrint[0] != '\0')
+			if (stringToPrint != NULL)
 			{
 			printf("%s", stringToPrint);
 			}
