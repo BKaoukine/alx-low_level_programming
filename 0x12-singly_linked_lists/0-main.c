@@ -1,4 +1,4 @@
-#include "linked_listes.h"
+#include "lists.h"
 
 /**
  * main - check the code
