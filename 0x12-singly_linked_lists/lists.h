@@ -21,13 +21,10 @@ unsigned int len;
 struct list_s *next;
 } list_t;
 
-/**
- * print_list - prints all the elements of a list_t list.
- * @h: list_t input
- * Return: the number of nodes
- */
+/*Protoypes of Functions*/
 
 size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
 
 
 #endif /* LISTES_H */
