@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_listint - Starting point
+ * listint_len - Starting point
  * @h: header of the likned list
  * Description: Function that countes number of elements of a Linked list
  * Return: number of elements
