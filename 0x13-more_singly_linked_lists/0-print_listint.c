@@ -12,7 +12,7 @@ int count = 0;
 while (h != NULL)
 {
 count++;
-h = h->link;
+h = h->next;
 }
 
 printf("%d\n", count);
