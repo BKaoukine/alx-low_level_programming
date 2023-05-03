@@ -3,6 +3,7 @@
  * pop_listint - Starting Point
  * @head: Pointer to the head of the linked list.
  * Description: remove heade of listint_t list.
+ * Return: returns the head node’s data (n).
  */
 int pop_listint(listint_t **head)
 {
@@ -19,6 +20,6 @@ int pop_listint(listint_t **head)
 		free(tmp);
 	}
 
-	return((*head)->n);
+	return ((*head)->n);
 }
 
