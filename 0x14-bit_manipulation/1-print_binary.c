@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-unsigned int base2 = 1;
+unsigned long int base2 = 1;
 
 if (n == 0)
 _putchar('0');
@@ -31,5 +31,5 @@ _putchar('0');
 
 base2 >>= 1;
 }
-_putchar('\n');
+
 }
