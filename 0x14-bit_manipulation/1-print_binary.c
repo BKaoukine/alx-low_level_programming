@@ -12,10 +12,9 @@ if (n == 0)
 _putchar('0');
 
 while (base2 <= n)
-{
 base2 <<= 1;
-}
 
+if (base2 > n)
 base2 >>= 1;
 
 while (base2)
