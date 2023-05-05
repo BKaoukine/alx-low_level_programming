@@ -9,6 +9,7 @@ unsigned int binary_to_uint(const char *b)
 {
 /*Initialize the result to 0.*/
 unsigned int result = 0;
+int i;
 
 /* If the input string is NULL, return 0. */
 if (b == NULL)
@@ -17,7 +18,7 @@ return (0);
 }
 
 /* Iterate over the input string until the null terminator is reached. */
-for (int i = 0; b[i] != '\0'; i++)
+for (i = 0; b[i] != '\0'; i++)
 {
 /* If the current character is '0' or '1', update the result accordingly. */
 if (b[i] == '0' || b[i] == '1')
