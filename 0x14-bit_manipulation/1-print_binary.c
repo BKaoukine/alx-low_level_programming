@@ -1,28 +1,15 @@
 #include "main.h"
 /**
- * print_binary - Strating Point
- * @n: Decimal number to convert to binary
- * Description: base10 number convert into base2
+ * print_binary - prints the binary representation of a number
+ * @n: unsigned long int to be printed in binary
  */
 void print_binary(unsigned long int n)
 {
-unsigned long int base2 = 1;
+int i;
 
-if (n == 0)
+for (i = 63; i >= 0; i--)
 {
-_putchar('0');
-return;
-}
-
-while (base2 <= n)
-base2 <<= 1;
-
-if (base2 > n)
-base2 >>= 1;
-
-while (base2)
-{
-if (base2 & n)
+if ((n >> i) & 1)
 {
 _putchar('1');
 }
@@ -30,8 +17,6 @@ else
 {
 _putchar('0');
 }
-
-base2 >>= 1;
+}
 }
 
-}
