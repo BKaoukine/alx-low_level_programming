@@ -15,8 +15,7 @@ if (index >= sizeof(unsigned long int) * 8)
 return (-1); /*index out of range*/
 }
 
-
-   	base2 = 1 << index;
-    *n = *n & ~base2;
+base2 = 1 << index;
+*n = *n & ~base2;
 return (1);
 }
