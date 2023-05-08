@@ -14,12 +14,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fo, fw;
 	unsigned long int i;
 	char *c;
+	if (filename == NULL)
+	{
+		return (0);
+	}
 
 	fo = open(filename, O_RDONLY);
 	c = malloc(letters * sizeof(char));
 	fw = read(fo, c, letters);
 
-	if (fo == -1 || filename == NULL || fw < 0)
+	if (fo == -1 || fw < 0)
 	{
 		return (0);
 	}
@@ -29,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		_putchar(*c);
 	}
 
-	close (fo);
-	return (fw);
+	close(fo);
+	return (letters);
 
 }
