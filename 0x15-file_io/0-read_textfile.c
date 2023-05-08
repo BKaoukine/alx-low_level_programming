@@ -11,28 +11,38 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fo, fw;
-	unsigned long int i;
+	int fo, fr;
+	size_t i;
 	char *c;
+
 	if (filename == NULL)
-	{
 		return (0);
-	}
 
 	fo = open(filename, O_RDONLY);
-	c = malloc(letters * sizeof(char));
-	fw = read(fo, c, letters);
+	if(fo == -1)
+		return (0);
 
-	if (fo == -1 || fw < 0)
+	c = malloc(letters);
+	if(c == NULL)
 	{
+		close(fo);
 		return (0);
 	}
 
-	for (i = 0; i <= letters; i++)
+	fr = read(fo, c, letters);
+
+	if (fr == -1)
 	{
-		_putchar(*c);
+		free(fr);
+		close(fo);
+		return (0);
 	}
 
+	for (i = 0; i < fr; i++)
+		_putchar(c[i]);
+
+
+	free(c);
 	close(fo);
 	return (letters);
 
