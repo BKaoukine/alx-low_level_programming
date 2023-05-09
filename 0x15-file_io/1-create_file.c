@@ -1,40 +1,44 @@
 #include "main.h"
 
 /**
- * create_file - Strating Point
+ * create_file - Starting Point
  * @filename: the file to create
  * @text_content: text to write into the file created
  *
  * Description: create a file and write text into it
- * Return: 1 on Succes or -1 on failure
-*/
+ * Return: 1 on Success or -1 on failure
+ */
 
 int create_file(const char *filename, char *text_content)
 {
-	int fo, textlenght, fw;
+    int fileopen, text_length, filewrite;
 
-	if (filename == NULL)
-	{
-		printf("error 1");
-		return (-1);
-	}
+    if (filename == NULL)
+    {
+        return (-1);
+    }
 
-if (text_content != NULL)
-{
-	for (textlenght = 0; text_content[textlenght];)
-	{
-		textlenght++;
-	}
-}
+    if (text_content != NULL)
+    {
+        for (text_length = 0; text_content[text_length];)
+        {
+            text_length++;
+        }
+    }
 
-	fo = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	fw = write(fo, filename, textlenght);
-	if (fo == -1 || fw == -1)
-	{
-		return (-1);
-	}
+    fileopen = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+    if (fileopen == -1)
+    {
+        return (-1);
+    }
 
-	close(fo);
-	return (1);
+    filewrite = write(fileopen, text_content, text_length);
+    if (filewrite == -1)
+    {
+        close(fileopen);
+        return (-1);
+    }
 
+    close(fileopen);
+    return (1);
 }
