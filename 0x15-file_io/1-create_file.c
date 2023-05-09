@@ -27,15 +27,9 @@ int create_file(const char *filename, char *text_content)
     }
 
     fileopen = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-    if (fileopen == -1)
-    {
-        return (-1);
-    }
-
     filewrite = write(fileopen, text_content, text_length);
-    if (filewrite == -1)
+    if (filewrite == -1 || fileopen == -1)
     {
-        close(fileopen);
         return (-1);
     }
 
