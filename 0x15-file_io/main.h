@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define MY_BUFFER_SIZE 1024
 
 /*Included Libraries*/
 #include <stdlib.h>
