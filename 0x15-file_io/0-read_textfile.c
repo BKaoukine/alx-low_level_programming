@@ -23,8 +23,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 /*Allocating memory for the buffer*/
 	fileBuff = malloc(sizeof(char) * letters);
+
 /*Reading from the file*/
 	fread = read(fopen, fileBuff, letters);
+
 /*Writing required size into STDOUT*/
 	fwrite = write(STDOUT_FILENO, fileBuff, fread);
 
