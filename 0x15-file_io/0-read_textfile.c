@@ -21,10 +21,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fopen == -1)
 		return (0);
 
-
-	fileBuff = malloc(sizeof(char) * letters);/*Allocating memory for the buffer*/
-	fread = read(fopen, fileBuff, letters);/*Reading from the file*/
-	fwrite = write(STDOUT_FILENO, fileBuff, fread);/*Writing required size into STDOUT*/
+/*Allocating memory for the buffer*/
+	fileBuff = malloc(sizeof(char) * letters);
+/*Reading from the file*/
+	fread = read(fopen, fileBuff, letters);
+/*Writing required size into STDOUT*/
+	fwrite = write(STDOUT_FILENO, fileBuff, fread);
 
 
 	free(fileBuff);
