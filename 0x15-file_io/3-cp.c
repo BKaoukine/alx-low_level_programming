@@ -13,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int cpFrom, cpTo, readFrom, writeTo;
+	int cpFrom, cpTo, readFrom, writeTo, closeSource, closeDest;
 	char *buffer;
 
 	if (argc != 3)
@@ -55,8 +55,18 @@ int main(int argc, char *argv[])
 	} while (readFrom > 0);
 
 	free(buffer);
-	close(cpFrom);
-	close(cpTo);
+	closeSource = close(cpFrom);
+	if (closeSource == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cpFrom);
+		exit(100);
+	}
+	closeDest = close(cpTo);
+	if (closeDest == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cpTo);
+		exit(100);
+	}
 
 
 	return (0);
