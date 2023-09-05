@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	closeDest = (cpTo);
 	if (closeSource == -1 || closeDest == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd \n");
 		exit(100);
 	}
 	return (0);
