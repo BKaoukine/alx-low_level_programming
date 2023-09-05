@@ -13,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int cpFrom, cpTo, readFrom, writeTo, closeSource, closeDest;
+	int cpFrom, cpTo, readFrom, writeTo;
 	char *buffer;
 
 	if (argc != 3)
