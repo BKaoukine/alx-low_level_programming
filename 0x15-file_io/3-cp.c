@@ -21,7 +21,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	buffer = create_buffer(argv[2]);
+	buffer = malloc(sizeof(char) * 1024);
+
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+
 	cpFrom = open(argv[1], O_RDONLY);
 	readFrom = read(cpFrom, buffer, 1024);
 	cpTo = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -47,8 +55,9 @@ int main(int argc, char *argv[])
 	} while (readFrom > 0);
 
 	free(buffer);
-	close_file(cpFrom);
-	close_file(cpTo);
+	close(cpFrom);
+	close(cpTo);
+
 
 	return (0);
 }
