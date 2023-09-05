@@ -1,5 +1,21 @@
 #include "main.h"
 /**
+ * close_file - Closes file descriptors.
+ * @fileToClose: The file descriptor to be closed.
+ */
+void close_file(int fileToClose)
+{
+	int cs;
+
+	cs = close(fileToClose);
+
+	if (cs == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileToClose);
+		exit(100);
+	}
+}
+/**
  * main - Copies the contents of a file to another file.
  * @argc: The number of arguments given to the program.
  * @argv: An array of pointers to the arguments.
@@ -10,7 +26,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int cpFrom, cpTo, readFrom, writeTo, closeSource, closeDest;
+	int cpFrom, cpTo, readFrom, writeTo;
 	char *buffer;
 
 	if (argc != 3)
@@ -45,12 +61,8 @@ int main(int argc, char *argv[])
 		cpTo = open(argv[2], O_WRONLY | O_APPEND);
 	} while (readFrom > 0);
 	free(buffer);
-	closeSource = (cpFrom);
-	closeDest = (cpTo);
-	if (closeSource == -1 || closeDest == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd \n");
-		exit(100);
-	}
+	close_file(cpFrom);
+	close_file(cpTo);
+
 	return (0);
 }
