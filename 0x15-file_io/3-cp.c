@@ -22,52 +22,33 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	buffer = malloc(sizeof(char) * 1024);
-
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
 	cpFrom = open(argv[1], O_RDONLY);
 	readFrom = read(cpFrom, buffer, 1024);
 	cpTo = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	do {
 		if (cpFrom == -1 || readFrom == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
 		writeTo = write(cpTo, buffer, readFrom);
 		if (cpTo == -1 || writeTo == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
 		readFrom = read(cpFrom, buffer, 1024);
 		cpTo = open(argv[2], O_WRONLY | O_APPEND);
 	} while (readFrom > 0);
-
 	free(buffer);
-	closeSource = close(cpFrom);
-	if (closeSource == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cpFrom);
-		exit(100);
-	}
-	closeDest = close(cpTo);
-	if (closeDest == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cpTo);
-		exit(100);
-	}
-
-
+	close_file(cpFrom);
+	close_file(cpTo);
 	return (0);
 }
