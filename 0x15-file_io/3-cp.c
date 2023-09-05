@@ -6,14 +6,11 @@
  *
  * Return: 0 on success.
  *
- * Description: If the argument count is incorrect - exit code 97.
- * If file_from does not exist or cannot be read - exit code 98.
- * If file_to cannot be created or written to - exit code 99.
- * If file_to or file_from cannot be closed - exit code 100.
+ * Description: program copies content from source to destination
  */
 int main(int argc, char *argv[])
 {
-	int cpFrom, cpTo, readFrom, writeTo;
+	int cpFrom, cpTo, readFrom, writeTo, closeSource, closeDest;
 	char *buffer;
 
 	if (argc != 3)
@@ -48,7 +45,12 @@ int main(int argc, char *argv[])
 		cpTo = open(argv[2], O_WRONLY | O_APPEND);
 	} while (readFrom > 0);
 	free(buffer);
-	close_file(cpFrom);
-	close_file(cpTo);
+	closeSource = (cpFrom);
+	closeDest = (cpTo);
+	if (closeSource == -1 || closeDest == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+		exit(100);
+	}
 	return (0);
 }
