@@ -3,13 +3,15 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always EXIT_SUCCESS
  */
 int main(void)
 {
-    int array[15] = {
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 23, 47, 89, 160
+    int array[] = {
+        0, 0, 1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 7, 8, 8, 8, 9, 9
     };
-    printf("Found at index: %d\n", jump_search(array, 15, 11));
-    return (0);
+    size_t size = sizeof(array) / sizeof(array[0]);
+
+    printf("Found %d at index: %d\n\n", 10, interpolation_search(array, size, 10));
+    return (EXIT_SUCCESS);
 }
