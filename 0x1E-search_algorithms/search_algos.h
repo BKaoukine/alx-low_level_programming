@@ -1,6 +1,12 @@
 #ifndef SEARCH_ALGOS
 #define SEARCH_ALGOS
 
+/*Included Libraries*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stddef.h>
+
 /**
  * struct listint_s - singly linked list
  *
@@ -34,14 +40,6 @@ size_t index;
 struct skiplist_s *next;
 struct skiplist_s *express;
 } skiplist_t;
-
-
-
-/*Included Libraries*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <stddef.h>
 
 
 /*Functions Prototypes*/
